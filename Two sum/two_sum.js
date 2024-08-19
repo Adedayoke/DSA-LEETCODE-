@@ -32,8 +32,10 @@ function twoSum(arr, tar){
     for(let i = 0; i < arr.length; i++){
         var sum = arr[i]
         for(let j = 1; j < arr.length; j++){
-            if(sum + arr[j] === tar){
-                return ([i, j])
+            if(i !== j){
+                if(sum + arr[j] === tar){
+                    return ([i, j])
+                }
             }
         }
     }
@@ -49,7 +51,7 @@ function twoSum(arr, tar){
 // const target = 6
 
 // case 3
-const nums = [3,3]
-const target = 6
+const nums = [2,5,5,11]
+const target = 10
 
 console.log(twoSum(nums, target))
